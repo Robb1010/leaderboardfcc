@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+body h1 {
+  background-color: #006400;
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  color: #fff;
+}
+
+body .content {
+  margin: 20px;
+}
+
+body .content ul {
+  margin-left: 40px;
+  padding-left: 0;
+  flex-direction: column;
+  border-bottom: solid;
+  display: flex;
+  border-width: 1px;
+  border-color: #9e9e9e;
+}
+
+body .content ul .unselected, body .content ul .selected {
+  margin-left: 10px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border-style: none;
+  background-color: white;
+}
+
+body .content ul .selected {
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  background-color: #006400;
+}
+
+body .content ul .image {
+  width: 40px;
+}
+
+body .content ul .title {
+  display: flex;
+  justify-content: space-around;
+  font-weight: normal;
+  background-color: #006400;
+  border-bottom: solid;
+  border-color: black;
+  border-width: 1px;
+  color: white;
+}
+
+body .content ul li {
+  display: flex;
+  background-color: #ececec;
+  color: #006400;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  width: 75vw;
+  border-style: solid;
+  border-bottom: none;
+  display: flex;
+  border-width: 1px;
+  border-color: #9e9e9e;
+  justify-content: space-between;
+}
+
+body .content ul li .user {
+  display: flex;
+  width: 50%;
+}
+
+body .content ul li .user a {
+  text-decoration: none;
+  color: #006400;
+}
+
+body .content ul li .user .item {
+  margin-right: 40px;
+  display: flex;
+  align-self: center;
+}
+
+body .content ul li .user .position {
+  display: flex;
+  width: 20px;
+  justify-content: center;
+}
+
+body .content ul li .user img {
+  display: flex;
+  border-width: 1px;
+  border-color: #006400;
+  border-radius: 4px;
+  border-style: solid;
+  box-shadow: 2px 2px 6px #006400;
+}
+
+body .content ul li .numbers {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+  align-self: center;
+}
+
+body .content ul li .numbers .thirty {
+  padding-right: 30px;
+}
+
+@media only screen and (max-width: 580px) {
+  body .content {
+    margin: 0;
+    padding: 0;
+  }
+  body ul {
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 0;
+  }
+  body li {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+  }
+  body .image {
+    width: 35px;
+  }
+}

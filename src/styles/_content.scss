@@ -1,0 +1,130 @@
+.content {
+  margin: 20px;
+
+  @mixin borders($color) {
+    display: flex;
+    border-width: 1px;
+    border-color: $color;
+  }
+
+  ul {
+    margin-left: 40px;
+    padding-left: 0;
+    flex-direction: column;
+    border-bottom: solid;
+    @include borders($border);
+
+    .unselected {
+      margin-left: 10px;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      border-style: none;
+      background-color: white;
+    }
+
+    .selected {
+      @extend .unselected;
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      background-color: $campgreen;
+    }
+
+    .image {
+      width: 40px;
+    }
+
+    .title {
+      display: flex;
+      justify-content: space-around;
+      font-weight: normal;
+      background-color: $campgreen;
+      border-bottom: solid;
+      border-color: black;
+      border-width: 1px;
+      color: white;
+    }
+
+    li {
+      display: flex;
+      background-color: #ececec;
+      color: $campgreen;
+      font-weight: 600;
+      padding-top: 10px;
+      padding-left: 5px;
+      padding-bottom: 10px;
+      width: 75vw;
+      border-style: solid;
+      border-bottom: none;
+      @include borders($border);
+      justify-content: space-between;
+
+      .user {
+        display: flex;
+        width: 50%;
+
+        a {
+          text-decoration: none;
+          color: $campgreen;
+        }
+
+        .item {
+          margin-right: 40px;
+          display: flex;
+          align-self: center;
+        }
+
+        .position {
+            display: flex;
+            width: 20px;
+            justify-content: center;
+          }
+
+        img {
+          @include borders($campgreen);
+          border-radius: 4px;
+          border-style: solid;
+          box-shadow: 2px 2px 6px $campgreen;
+      }
+    }
+
+      .numbers {
+        display: flex;
+        justify-content: space-around;
+        width: 45%;
+        align-self: center;
+
+        .thirty {
+          padding-right: 30px;
+        }
+      }
+      }
+    }
+  }
+
+@media only screen and (max-width: 580px) {
+
+.content {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin-top: 10px;
+  margin-left: 0;
+  padding: 0;
+}
+
+
+li {
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+.image {
+  width: 35px;
+}
+
+}
